@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "musa509s23-team2-philly-cama",
+    "private_key_id": "67593d6af9629fd4e3d2426837bb57702a0aba82",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCz1NtMhO7KqRIQ\nEJw4wXQwBo8P9cYd/dylqB34/kvEPeuxwVAX/0yD+ndlzjPkpcIjTX+ifeHQ9yKW\nawywSfEPQC2MleGCiyQETGCAyGcBJ2flyMOt1s95A/iV+5tSmGaUGWT8wON2elGU\no8XFWrX/LH0peKUoel3vLy8W2tVMO1XXlZwvOmiotxv3KlGVrcsCIx0JTdQhhajE\nvnjCj/EL8yQdIuwwBZ8589Ro7i98zIjOv/xMEvUeVtykMLjWapqzILZwucrN5uoZ\nIarC5d0NZdQl+HpfcERX9MeFvRRe9eUzr/f1kcvAOE8axaB2QxcfPKICncxvMBhU\nMVdDTlrTAgMBAAECggEADuMswoFwyVtE0Qqm/DXbugwY9N/KZno5NYec75uRxy2/\nIOiZilsKyRRHpSh0eFXWpBiK2/di5etHtD8pfkCo0bPk8XIJCMcfFLID/TVZ/aj2\n+3lq5a3WYDTZdAUv3x8ZwuH1T81iJ1FKBq2mNkfjsDvNIs1HkvnKY/46fkBgjx5o\n2m2XJjdafKxjfzdw5GavRwu17M+rVsfFK1aMRPrw4TP6d8c/CO3CLnNXwIB7zYm7\nkADfh9hSMTKqLDoW1FiTq/S/73PXpPv03dC3Li0ULY7bucHx7f6op0ibM6dqp5oE\nDBjalrcWiB+a1bFudyVEx7fOxBRGTpMrvVwNeKoiIQKBgQDdUGR3NQFbs0kV/QEU\nZTZH8bEv9jH1DKENKYTwm/ZrXZ60KMcy/CIlROnuB8Wl6Du8F8SC5T5N/m3VdXCq\n4YlzPc/ppn00Qy0BSUbaixDJrTjzTDuySxaFU4bSGRXvOAEy9ZlbLLAbRPCAkFhU\n0EA7OCCQsq6xD4/pVZZwHaydswKBgQDQBBedKmv6D10Td46cJ+AoseM9wl8gPvPx\n+P5tlaOCIqWEFxmCOXFI1AIg5U+vrk2apApuHUDYaHacjPEfs3Zl7do05Kun8AbZ\n13KVMf4oIWT9ss1VotgHWp+fBGSZrHTjx/FZ99Jp3B7UNmDs+A3bRDNgqJF/gZ+O\nKhhyDFX+YQKBgFgAu7JbNWsNY6aGsIM3q9n31YlI0JyspO3i8KXsnpQa6hyhinRP\nphRDzvGDzagnLHmiydVy6s+AuJQE2wRYIpvcnGxAc9DwVVkJlk8YtVg8tUSpr6M6\nEH57tESfDQXOs0tcNdr3bh+pziiRPU6ccK4bp3diVey6T3NtQSDb6+PZAoGBAM4c\nj+1ZwF2o5XfJihPuauzHvjtOogUIe5yyNCAPGlFy1P/6B3uCQV6BO46uyHNxyVFF\n41PSRpNnhsd929mmb9V1hTXNssyXR6KIGO/99jB7Tl8W0OBel6FJyUm+B5RBThz4\n24tixCnCQwXQz99dthUiEapfvLNTk+5AhbJTyM1hAoGACOJbeOGIgIFwn/Im6QgB\nUm6bESonI8isje1obT+T28gSi9LI8KFpRmkJYQFh4sPm4YuVGckybyoLo9jSM+qr\n9kGOudZa9oOUV4HEAywRp18XqZG5/bpwvEd4PR5tQznXJaO+4dThoJfhMKbEAKwN\nyWlS7kcvKXQU2r0gbPZgBeI=\n-----END PRIVATE KEY-----\n",
+    "client_email": "data-pipeline-user@musa509s23-team2-philly-cama.iam.gserviceaccount.com",
+    "client_id": "118152993339099883022",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/data-pipeline-user%40musa509s23-team2-philly-cama.iam.gserviceaccount.com"
+  }
