@@ -2,4 +2,6 @@ import { initMap } from './map.js';
 
 console.log("main");
 
-initMap();
+const map = initMap();
+
+window.map = map;
