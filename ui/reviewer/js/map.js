@@ -9,17 +9,6 @@ function initMap() {
         attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
     }).addTo(map);
   
-    // map.treeLayer = L.geoJSON(null, {
-    //   pointToLayer: (feature, latlng) => L.circleMarker(latlng),
-    //   style: {
-    //     fillColor: '#83bf15',
-    //     fillOpacity: 0.3,
-    //     stroke: false,
-    //   },
-    // }).addTo(map);
-  
-    map.positionLayer = L.geoJSON(null).addTo(map);
-  
     return map;
   };
 
