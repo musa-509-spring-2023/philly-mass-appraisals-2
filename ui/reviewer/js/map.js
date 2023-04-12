@@ -1,5 +1,5 @@
 function initMap() {
-    const map = L.map('map').setView([39.98, -75.2], 11.25);
+    const map = L.map('map-container').setView([39.98, -75.2], 11.25);
   
     const mapboxAccount = 'keelbn';
     const mapboxStyle = 'clg3y1y4q006401ppzs71inav';

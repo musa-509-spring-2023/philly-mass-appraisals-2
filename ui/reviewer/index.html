@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Reviewer</title>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Philly Mass Appraisals</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.2/leaflet.min.css" integrity="sha512-ekzf1ud/EngtmWo8xbIkhtBQsSgkOhTyyD6AA6b/J4/YXTInuNgeKVQDCH/pysNYnrGgsZazWSuWsNtFKzHbmg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sum-container">
+        <div class="title-container">
+            <div class="sum-title">
+                Mass Appraisal Reviewer
+            </div>
+            <div class="sum-contents">
+                There were 350,626 properties that increased in assessed value since the last mass appraisal. Overall, each property assessment changed by an increase of 23.6% on average.
+            </div>
+        </div>
+        <div class="current-graph-continer">
 
-  <body>
-    <div id="map" class="map"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.2/leaflet.min.js" integrity="sha512-QPePsP1y4BuymxYZEuQdJ4dsUzZR9MmyrMOLK//zHK4ZoDfMA7zQOJefboRSIm6QKCfzC7djwDOO/+0f72w7Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="js/main.js"></script>
-  </body>
+        </div>
+        <div class="percent-graph-continer">
+
+        </div>
+    </div>
+    <div class="map-container" id = "map-container">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.2/leaflet.min.js" integrity="sha512-QPePsP1y4BuymxYZEuQdJ4dsUzZR9MmyrMOLK//zHK4ZoDfMA7zQOJefboRSIm6QKCfzC7djwDOO/+0f72w7Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script type="module" src="js/main.js"></script>
+    </div>
+
+</body>
 </html>
