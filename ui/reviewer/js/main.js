@@ -4,4 +4,4 @@ console.log("main");
 
 const map = initMap();
 
-window.map = map;
+window.mapview = map;
