@@ -1,0 +1,8 @@
+gcloud functions deploy extract-opa `
+  --region us-central1 `
+  --runtime python311 `
+  --trigger-http `
+  --source extract_properties `
+  --entry-point extract_opa `
+  --project musa509s23-team2-philly-cama `
+  --service-account data-pipeline-user@musa509s23-team2-philly-cama.iam.gserviceaccount.com
