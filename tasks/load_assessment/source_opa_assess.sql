@@ -9,6 +9,6 @@ CREATE OR REPLACE EXTERNAL TABLE `source.opa_assessments` (
     `exempt_building` NUMERIC
 )
 OPTIONS (
-    uris = ['gs://musa509s23_team02_prepared_data/opa_assessments/data.jsonl'],
+    uris = ['gs://musa509s23_team02_prepared_data/opa_assessments/assessments.jsonl'],
     format = 'JSON'
 )
