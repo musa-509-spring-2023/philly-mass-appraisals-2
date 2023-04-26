@@ -1,6 +1,4 @@
 import json
-from urllib.request import urlopen
-import io
 from google.cloud import storage
 import functions_framework
 import dotenv
@@ -15,8 +13,6 @@ def prepare_properties(request):
     blob = bucket.blob("opa_properties/opa.geojson")
     content = blob.download_as_string()
 
-    # with open(RAW_DATA_DIR/'opa.geojson', 'rU', encoding='utf-8') as f:
-
     data = json.loads(content)
 
     processed_blob = bucket.blob('opa_properties/opa_processed.jsonl')
@@ -27,14 +23,6 @@ def prepare_properties(request):
         row['geog'] = json.dumps(feature['geometry'])
         jsonl_data.append(json.dumps(row))
 
-    processed_blob.upload_from_string('\n'.join(jsonl_data), content_type = 'application/jsonl')
-
-    #with open(PROCESSED_DATA_DIR / 'opa_propeorties.jsonl', 'w') as f:
-      #for feature in data['features']:
-      #    row = feature['properties']
-      #    row['geog'] = json.dumps(feature['geometry'])
-      #    f.write(json.dumps(row) + '\n')
-      #
-      #  processed_blob.upload_from_file(
+    processed_blob.upload_from_string('\n'.join(jsonl_data), content_type='application/jsonl')
 
     return 'OK'
