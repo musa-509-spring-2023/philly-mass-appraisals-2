@@ -9,11 +9,11 @@ function initMap() {
         attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
     }).addTo(map);
     
-  
+  const colors = ["#f0bc1f", "#827345", "#9b76b8", "#482863"]
     //const tiles = downloadTiles();
 
 	const url = "https://storage.googleapis.com/musa509s23_team02_public/tiles/properties/{z}/{x}/{y}.pbf"
-
+  
   //put dependencies on filter chexkbox checked DOM, not created yet
   const vectorTileStyling = {
     property_tile_info: (properties, zoom) => { 
@@ -25,40 +25,40 @@ function initMap() {
         return ({ 
         fill: true,
         weight: 1,
-        fillColor: '#faa0a0',
-        color: '#faa0a0',
-        fillOpacity: 0.2,
-        opacity: 0.4,
+        fillColor: colors[0],
+        color: colors[0],
+        fillOpacity: 0.8,
+        opacity: 1,
         });
       } 
       if (current_value >= 150000 && current_value < 300000) {
         return ({ 
         fill: true,
         weight: 1,
-        fillColor: '#fa8072',
-        color: '#fa8072',
-        fillOpacity: 0.2,
-        opacity: 0.4,
+        fillColor: colors[1],
+        color: colors[1],
+        fillOpacity: 0.8,
+        opacity: 1,
         }); 
       }
       if (current_value >= 300000 && current_value < 430000) {
         return ({ 
         fill: true,
         weight: 1,
-        fillColor: '#ff2400',
-        color: '#ff2400',
-        fillOpacity: 0.2,
-        opacity: 0.4,
+        fillColor: colors[2],
+        color: colors[2],
+        fillOpacity: 0.8,
+        opacity: 1,
         }); 
       }
       if (current_value >= 430000) {
         return ({ 
         fill: true,
         weight: 1,
-        fillColor: '#7c3030',
-        color: '#7c3030',
-        fillOpacity: 0.2,
-        opacity: 0.4,
+        fillColor: colors[3],
+        color: colors[3],
+        fillOpacity: 0.8,
+        opacity: 1,
         }); 
       }
     }
