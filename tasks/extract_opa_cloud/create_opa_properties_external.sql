@@ -1,0 +1,72 @@
+CREATE OR REPLACE EXTERNAL TABLE `source.opa_properties` (
+
+
+
+
+
+    	
+    1garage_type STRING,		
+    1general_construction	STRING,			
+    1geographic_ward	STRING,		
+    1homestead_exemption	STRING,		
+    1house_extension	STRING,		
+    1house_number	STRING,		
+    1interior_condition	STRING,		
+    1location	STRING,			
+    1mailing_address_1	STRING,		
+    1mailing_address_2	STRING,			
+    1mailing_care_of	STRING,			
+    1mailing_city_state	STRING,		
+    1mailing_street	STRING,		
+    1mailing_zip	STRING,			
+    1market_value	STRING,		
+    1market_value_date	STRING,			
+    1number_of_bathrooms	STRING,			
+    1number_of_bedrooms	STRING,		
+    1number_of_rooms	STRING,		
+    1number_stories	STRING,		
+    1off_street_open	STRING,		
+    1other_building	STRING,			
+    1owner_1	STRING,		
+    1owner_2	STRING,		
+    1parcel_number	STRING,		
+    1parcel_shape	STRING,		
+    1quality_grade	STRING,		
+    1recording_date	TIMESTAMP,			
+    1registry_number	STRING,			
+    1sale_date	TIMESTAMP,			
+    1sale_price	NUMERIC,		
+    1separate_utilities	STRING,		
+    1sewer	STRING,		
+    1site_type	STRING,			
+    1state_code	STRING,			
+    1street_code	STRING,		
+    1street_designation	STRING,			
+    1street_direction	STRING,			
+    1street_name	STRING,			
+    1suffix	STRING,			
+    1taxable_building	NUMERIC,			
+    1taxable_land	NUMERIC,			
+    1topography	STRING,			
+    1total_area	NUMERIC,		
+    1total_livable_area	NUMERIC,		
+    1type_heater	STRING,			
+    1unfinished	STRING,			
+    1unit	STRING,		
+    1utility	STRING,		
+    1view_type	STRING,		
+    1year_built	STRING,		
+    1year_built_estimate	STRING,		
+    1zip_code	STRING,			
+    1zoning	STRING,		
+    1pin	STRING,		
+    1building_code_new	STRING,		
+    1building_code_description_new	STRING,			
+    1lat	FLOAT,			
+    1lng	FLOAT			
+
+)
+OPTIONS (
+    sourceUris = ['gs://musa509s23_team02_prepared_data/opa_properties/data.jsonl'],
+    format = 'JSONL'
+)
