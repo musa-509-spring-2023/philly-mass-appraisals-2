@@ -1,12 +1,12 @@
 from urllib.request import urlopen
 from google.cloud import storage
+import functions_framework
 import dotenv
 dotenv.load_dotenv()
-import functions_framework
 
 
 @functions_framework.http
-def extract_opa(request):
+def extract_properties(request):
     client = storage.Client()
     bucket = client.bucket("musa509s23_team02_raw_data")
 
