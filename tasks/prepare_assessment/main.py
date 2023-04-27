@@ -9,14 +9,18 @@ import functions_framework
 def prepare_assessments(request):
     client = storage.Client()
     raw_bucket =  client.bucket("musa509s23_team02_prepared_data")
-    processed_bucket = raw_bucket.blob('opa_assessments/assessments.jsonl')
+    processed_bucket =client.bucket("musa509s23_team02_prepared_data")
     raw_blob = raw_bucket.blob("opa_assessments/assessments.csv")
-    csv_data = raw_blob.download_as_string().decode('utf-8')
-    # Convert CSV data to JSONL format
-    jsonl_data = []
-    for row in csv.DictReader(csv_data.splitlines()):
-      jsonl_data.append(json.dumps(row))
+    processed_blob = processed_bucket.blob('opa_assessments/assessments.csv')
 
-    processed_blob = processed_bucket.upload_from_string('\n'.join(jsonl_data), content_type = 'application/jsonl')
+    content = raw_blob.download_as_string()
+    data = json.loads(content)
+    outfile = io.StringIO()
+    writer = csv.writer(outfile)
+    writer.writerows(data)
+    processed_blob.upload_from_string(outfile.getvalue(), content_type = "text/csv")
     
     return 'OK'
+
+
+
