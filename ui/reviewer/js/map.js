@@ -3,7 +3,7 @@ const checkboxes = document.querySelectorAll('.filter-checkbox');
 
 function styleBy(field){
     if (field < 150000) {
-    return ({ 
+    return ({
     fill: true,
     weight: 1,
     fillColor: colors[0],
@@ -12,34 +12,34 @@ function styleBy(field){
     opacity: 1,
     });
   } else if (field  >= 150000 && field < 300000) {
-    return ({ 
+    return ({
     fill: true,
     weight: 1,
     fillColor: colors[1],
     color: colors[1],
     fillOpacity: 0.8,
     opacity: 1,
-    }); 
+    });
   } else if (field  >= 300000 && field  < 430000) {
-    return ({ 
+    return ({
     fill: true,
     weight: 1,
     fillColor: colors[2],
     color: colors[2],
     fillOpacity: 0.8,
     opacity: 1,
-    }); 
+    });
   } else if (field  >= 430000) {
-    return ({ 
+    return ({
     fill: true,
     weight: 1,
     fillColor: colors[3],
     color: colors[3],
     fillOpacity: 0.8,
     opacity: 1,
-    }); 
+    });
   } else {
-    return ({ 
+    return ({
       fill: true,
       weight: 1,
       fillColor: colors[0],
@@ -65,15 +65,16 @@ for (const checkbox of checkboxes){
           } else {
             display = 4
           }
+          mapview.vectorGrid.redraw();
       } else {
           console.log('you unclicked the checkbox ' + checkbox.value);
       }
   });
 }
-      
+
 function initMap() {
     const map = L.map('map-container').setView([39.98, -75.2], 12);
-  
+
     const mapboxAccount = 'keelbn';
     const mapboxStyle = 'clg3y1y4q006401ppzs71inav';
     const mapboxToken = 'pk.eyJ1Ijoia2VlbGJuIiwiYSI6ImNqaWVseGZjZzA3emMzdnAxM296OTFjNG8ifQ.W2j9Y2mz4t6vGRyKJk_Nyw';
@@ -81,16 +82,16 @@ function initMap() {
         maxZoom: 19,
         attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
     }).addTo(map);
-    
-  
+
+
     //const tiles = downloadTiles();
 
 	const url = "https://storage.googleapis.com/musa509s23_team02_public/tiles/properties/{z}/{x}/{y}.pbf"
 
   var vectorTileStyling = {
-        
-    property_tile_info: (properties, zoom) => { 
-        
+
+    property_tile_info: (properties, zoom) => {
+
       var current_value = properties.current_assessed_value;
       var tax_year_value = properties.tax_year_assessed_value;
       var perc_change = ((current_value-tax_year_value)/tax_year_value)*100;
@@ -104,7 +105,7 @@ function initMap() {
       } else if (display==4) {
         return styleBy(dollar_change);
       } else {
-        return ({ 
+        return ({
           fill: true,
           weight: 1,
           fillColor: colors[0],
@@ -113,14 +114,15 @@ function initMap() {
           opacity: 1,
           });
       }
-      
-      
+
+
     }
   };
 
 
 	var mapboxVectorTileOptions = {
 		rendererFactory: L.canvas.tile,
+    bounds: [[40.13623451097302, -75.2886199951172], [39.87957627231338, -74.95971679687501]],
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://www.mapbox.com/about/maps/">MapBox</a>',
 	  vectorTileLayerStyles: vectorTileStyling,
 	//	token: 'pk.eyJ1IjoiaXZhbnNhbmNoZXoiLCJhIjoiY2l6ZTJmd3FnMDA0dzMzbzFtaW10cXh2MSJ9.VsWCS9-EAX4_4W1K-nXnsA'
@@ -128,10 +130,10 @@ function initMap() {
 
 	var vectorGrid = L.vectorGrid.protobuf(url, mapboxVectorTileOptions)
 	.addTo(map);
-		
-	
+
+
 	map.vectorGrid = vectorGrid;
-  
+
     return map;
   };
 
