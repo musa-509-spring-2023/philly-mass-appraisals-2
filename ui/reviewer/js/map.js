@@ -73,7 +73,7 @@ for (const checkbox of checkboxes){
 }
 
 function initMap() {
-    const map = L.map('map-container').setView([39.98, -75.2], 12);
+    const map = L.map('map-container', {zoomSnap: 0}).setView([39.98, -75.2], 12);
 
     const mapboxAccount = 'keelbn';
     const mapboxStyle = 'clg3y1y4q006401ppzs71inav';
