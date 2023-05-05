@@ -1,3 +1,27 @@
+/*
+.display-container{
+    background-color:rgb(100, 100, 100);
+    height: 200vh;
+    font-size: 1em;
+    position: fixed;
+}
+*/
+
+.display-container {
+    width: 300px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 3;
+    background-color: white;
+}
+
+.choose-display-checkboxes{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .map-container{
     background-color: rgb(127, 168, 62);
     height: 100vh;
@@ -22,7 +46,7 @@
 .title-container{
     background-color: rgb(107, 153, 196);
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     z-index: 1;
 }
 
@@ -39,3 +63,4 @@
     width: 100%;
     z-index: 1;
 }
+
