@@ -1,5 +1,13 @@
 async function showRecentValueChart() {
-  const data = await fetchChartData();
+  let data = await fetchChartData();
+  console.log(data);
+
+  // Get the max tax year from the data.
+  const latestTaxYear = Math.max(...data.map(row => row.tax_year));
+
+  // Filter the data just for the latest tax year.
+  data = data.filter(row => row.tax_year == latestTaxYear);
+
   renderChart(data);
 }
 
@@ -10,14 +18,6 @@ async function fetchChartData() {
 }
 
 function renderChart(data) {
-  console.log(data);
-
-  // Get the max tax year from the data.
-  const latestTaxYear = Math.max(...data.map(row => row.tax_year));
-
-  // Filter the data just for the latest tax year.
-  data = data.filter(row => row.tax_year == latestTaxYear);
-
   // Calculate the total number of properties in the data.
   let totalProperties = data.map(row => row.property_count).reduce((a, b) => a + b, 0);
   console.log('totalProperties', totalProperties);
@@ -56,22 +56,26 @@ function renderChart(data) {
   // Render the chart.
   var options = {
     series: [{
-      name: 'Recent Assessment Values',
+      name: 'Number of Properties',
       data: Y,
     }],
     chart: {
-      height: 350,
+      height: 250,
       type: 'area'
     },
     dataLabels: {
       enabled: false
     },
     stroke: {
-      curve: 'smooth'
+      curve: 'smooth',
+      width: 1.5,
     },
     xaxis: {
       type: 'numeric',
       categories: X,
+      title: {
+        text: 'Assessment Value',
+      },
       labels: {
         formatter: function (val) {
           return '$' + (
@@ -81,6 +85,11 @@ function renderChart(data) {
           ) + (val === priceCutoff ? '+' : '');
         }
       },
+    },
+    yaxis: {
+      title: {
+        text: 'Number of Properties',
+      }
     },
   };
 
