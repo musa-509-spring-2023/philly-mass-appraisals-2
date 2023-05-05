@@ -72,6 +72,15 @@ function renderChart(data) {
     xaxis: {
       type: 'numeric',
       categories: X,
+      labels: {
+        formatter: function (val) {
+          return '$' + (
+            val < 1000 ?    val.toFixed(0) :
+            val < 1000000 ? (val / 1000).toFixed(0) + 'k' :
+                            (val / 1000000).toFixed(1) + 'M'
+          ) + (val === priceCutoff ? '+' : '');
+        }
+      },
     },
   };
 
