@@ -1,0 +1,8 @@
+gcloud functions deploy load-property-assessments `
+  --region us-central1 `
+  --runtime python311 `
+  --trigger-http `
+  --source load_assessment `
+  --entry-point load_opa_assessments `
+  --project musa509s23-team2-philly-cama `
+  --service-account data-pipeline-user@musa509s23-team2-philly-cama.iam.gserviceaccount.com
